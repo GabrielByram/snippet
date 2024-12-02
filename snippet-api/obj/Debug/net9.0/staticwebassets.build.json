@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7y5sXtPID9pH92so5jbRGEMDw4shqWno/F4vBDfkkE0=",
+  "Source": "snippet-api",
+  "BasePath": "_content/snippet-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

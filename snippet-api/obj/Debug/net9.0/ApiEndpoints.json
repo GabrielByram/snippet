@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "SnippetsController",
+    "Method": "GetSnippets",
+    "RelativePath": "api/Snippets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SnippetsController",
+    "Method": "AddSnippet",
+    "RelativePath": "api/Snippets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "snippet",
+        "Type": "Snippet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
