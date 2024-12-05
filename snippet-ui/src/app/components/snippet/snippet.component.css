@@ -1,0 +1,20 @@
+.snippet {
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .snippet.audio {
+    border-left: 5px solid green;
+  }
+  
+  .snippet h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .snippet p {
+    margin-bottom: 0px !important
+  }
