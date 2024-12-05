@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-snippet-list',
+  standalone: true,
   imports: [SnippetComponent, CommonModule],
   templateUrl: './snippet-list.component.html',
   styleUrl: './snippet-list.component.css'
@@ -16,6 +17,6 @@ export class SnippetListComponent {
   constructor(private snippetService: SnippetService) {}
 
   ngOnInit(): void {
-    this.snippets = this.snippetService.getSnippets();
+    this.snippetService.getSnippets().subscribe((snippets) => this.snippets = snippets);
   }
 }
