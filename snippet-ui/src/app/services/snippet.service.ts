@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpClientModule} from "@angular/common/http"
+import {HttpClient } from "@angular/common/http"
 import { Snippet } from "../snippet"
-import { SNIPPETS } from "../mock-snippets"
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +14,9 @@ export class SnippetService {
   getSnippets(): Observable<Snippet[]> {
     return this.http.get<Snippet[]>(this.apiUrl)
   }
+
+  deleteSnippet(snippet: Snippet): Observable<Snippet> {
+    const url = `${this.apiUrl}/${snippet.id}`
+    return this.http.delete<Snippet>(url)
+ }
 }

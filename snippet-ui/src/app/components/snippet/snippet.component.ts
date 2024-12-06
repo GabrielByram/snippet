@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Snippet } from '../../snippet';
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -10,8 +10,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './snippet.component.css'
 })
 export class SnippetComponent {
-  @Input() snippet : Snippet
-  faTimes = faTimes
+  @Input() snippet : Snippet;
+  @Output() onDeleteSnippet: EventEmitter<Snippet> = new EventEmitter();
+  faTimes = faTimes;
 
   constructor() {
     this.snippet = {
@@ -21,5 +22,9 @@ export class SnippetComponent {
       day: "test",
       audio: "test",
     }
+  }
+
+  onDelete(snippet: Snippet) {
+    this.onDeleteSnippet.emit(snippet)
   }
 }

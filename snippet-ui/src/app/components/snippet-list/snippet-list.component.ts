@@ -19,4 +19,9 @@ export class SnippetListComponent {
   ngOnInit(): void {
     this.snippetService.getSnippets().subscribe((snippets) => this.snippets = snippets);
   }
+
+  deleteSnippet(snippet: Snippet) {
+     this.snippetService.deleteSnippet(snippet).subscribe(() =>
+      this.snippets = this.snippets.filter((s) => s.id !== snippet.id))
+  }
 }

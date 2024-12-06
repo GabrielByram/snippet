@@ -1,5 +1,6 @@
 <app-snippet
     *ngFor="let snippet of snippets"
     [snippet]="snippet"
+    (onDeleteSnippet)="deleteSnippet(snippet)"
 >
 </app-snippet>
